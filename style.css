@@ -1,0 +1,42 @@
+header {
+    border: dashed 1px red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-section {
+    border: dashed 1px red;
+}
+
+.wrapper {
+    margin:auto;
+    width:80%;
+}
+
+body {
+    margin:0;  
+    font-family: 'oxygenregular', sans-serif;
+}
+
+header .logo img{
+    width: 300px;
+}
+
+.menu__item {
+    padding: 0 13px;
+    border: dashed 1px red;
+}
+
+.menu__item:last-child {
+    padding-right: 0;
+}
+
+.slider-section {
+    min-height: 1 vh;
+}
+
+.slider__item {
+    max-width: 100%;
+    max-height: 100%;
+}
