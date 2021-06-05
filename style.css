@@ -21,7 +21,7 @@ a {
 }
 
 .slider-section {
-    border: dashed 1px red;
+    
 }
 
 .wrapper {
@@ -47,6 +47,10 @@ body {
 
 .menu__item:last-child {
     padding-right: 0;
+}
+
+.menu__item:hover{
+    opacity: .5;
 }
 
 .slider-section {
@@ -85,6 +89,10 @@ body {
 
 .social__link:last-child {
     padding-right: 0;
+}
+
+.social__link:hover {
+    opacity: .5;
 }
 
 
