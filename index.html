@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
     <head>
         <meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Bridge</title>
-        <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='./style.css'>
         <link rel='stylesheet' href='font.css'>
     </head>
 
 
-    <body>
-              
+    <body>              
         <div class='wrapper'>
-            <header class='header'>
+            <header id='page-start' class='header' style='position: absolute; width: 75%'>
                 <div class='logo'>
                     <a class='logo__link' href="#"><img src="./pic/logo/bridge_logo-01.png" alt="logo"></a>
                 </div>
                 <nav class='menu'>
-                    <a class='menu__item' href="#">Work</a>
-                    <a class='menu__item' href="#">Contact</a>
+                    <a class='menu__item' href="#gallery-works">Work</a>
+                    <a class='menu__item' href="contact.html">Contact</a>
                     <a class='menu__item' href="#">About</a>
                 </nav> 
             </header>
@@ -30,46 +29,39 @@
             </section>
 
 
-            <section class='gallery'>
+            <section id='gallery-works' class='gallery'>
                 <!-- галерея -->
                 <div class="wrapper">
 
-                    <div id="gallery-block">
-                        <div id='gallery-block__big' class='gallery-block__item'></div>
-                        <div id='gallery-block__small-1' class='gallery-block__item'></div>
-                        <div id='gallery-block__small-2' class='gallery-block__item'></div>
-                        <div id='gallery-block__small-3' class='gallery-block__item'></div>
-                        <div id='gallery-block__small-4' class='gallery-block__item'></div>
+                    <div id="gallery-block" class='gallery__block'>
+                        <a id='gallery-block__big' class='gallery-block__item' href='project.html'>Project 1</a>
+                        <a id='gallery-block__small-1' class='gallery-block__item' href='project.html'>Project 2</a>
+                        <a id='gallery-block__small-2' class='gallery-block__item' href='project.html'>Project 3</a>
+                        <a id='gallery-block__small-3' class='gallery-block__item' href='project.html'>Project 4</a>
+                        <a id='gallery-block__small-4' class='gallery-block__item' href='project.html'>Project 5</a>
                     </div>
 
 
                     <div id="gallery-block-revert">
-                        <div id='gallery-block-revert__small-1' class='gallery-block__item'></div>
-                        <div id='gallery-block-revert__small-2' class='gallery-block__item'></div>
-                        <div id='gallery-block-revert__big' class='gallery-block__item'></div>
-                        <div id='gallery-block-revert__small-3' class='gallery-block__item'></div>
-                        <div id='gallery-block-revert__small-4' class='gallery-block__item'></div>
+                        <a id='gallery-block-revert__small-1' class='gallery-block__item' href='project.html'></a>
+                        <a id='gallery-block-revert__small-2' class='gallery-block__item' href='project.html'></a>
+                        <a id='gallery-block-revert__big' class='gallery-block__item' href='project.html'></a>
+                        <a id='gallery-block-revert__small-3' class='gallery-block__item' href='project.html'></a>
+                        <a id='gallery-block-revert__small-4' class='gallery-block__item' href='project.html'></a>
                     </div>
                 </div>
             </section>
 
 
-
-
-
-
-
-
-
             <footer class='footer'>
                 <div class="footer__inner">
-                    <a class="logo" href="#">
+                    <a class="logo" href="#page-start">
                         <img class="logo__img" src="./pic/logo/bridge_logo-01.png" alt="" >
                     </a>
                     
                     <div class="social">
                         <a class="social__link" href="#">Instagram</a>
-                        <a class="social__link" href="#">Telegram</a>
+                        <a class="social__link" href="https://t.me/steveseven">Telegram</a>
                         <a class="social__link" href="#">Facebook</a>
                     </div>
                 </div>
