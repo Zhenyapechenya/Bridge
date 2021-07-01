@@ -7,9 +7,10 @@ $(function(){
         autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: '0px',
-        cssEase: 'ease',
-        pauseOnHover: 'false',
-        pauseOnFocus:'false',
+        // cssEase: 'ease',
+        infinite: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         // variableWidth:'true',
         // responsive: [
         //     {
@@ -28,90 +29,32 @@ $(function(){
     });
 });
 
-// $(document).ready(function() {
+$(function() {
+    let header = $('.carousel__header');
+    let logo = $('#carousel__logo');
+    let hederHeight = header.height();
 
-// 	//E-mail Ajax Send
-// 	$("form").submit(function() { //Change
-//         console.log('123');
-// 		var th = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 1) {
+            header.addClass('header_fixed');
+        } else {
+            header.removeClass('header_fixed');
+        }
 
-// });
-
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form');
-    form.addEventListener('submit', formSend);
-
-    async function formSend(e) {
-        e.preventDefault();
-
-        let error = formValidate(form);
-
-        let formData = new FormData(form);
-
-        if (error === 0) {
-            form.classList.add('_sending');
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
+        if($(this).scrollTop() > 500) {
+            $("#carousel__logo").attr("src","./pic/logo/favicon.png");
+            logo.css({
+                'width': '50px',
+                'transition': '.3s',
             });
-            if (response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                form.reset();
-                form.classList.remove('_sending');
-            }else {
-                alert('Ошибка');
-                form.classList.remove('_sending');
-            }
-        }else {
-            alert('Заполните обязательные поля');
+            $("#link").attr("href","#");
+        } else {
+            $("#carousel__logo").attr("src","./pic/logo/bridge_logo-01.png");
+            logo.css({
+                'width': '300px',
+                'transition': '.3s',
+            });
+            $("#link").attr("href","http://www.google.com/");
         }
-    }
-
-    function formValidate(e) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req');
-    
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-            formRemoveError(input);
-
-            if (input.classList.contains('_email')) {
-                if (emailTest(input)) {
-                    formAddError(input);
-                    error++;
-                }
-            } else {
-                if (input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
-            }
-
-        }
-   }
-   function formAddError(input) {
-       input.parentElement.classList.add('_error');
-       input.classList.add('_error');
-   }
-   function formRemoveError(input) {
-       input.parentElement.classList.remove('_error');
-       input.classList.remove('_error');
-   }
-   function emailTest(input) {
-        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-   }
+    });
 });

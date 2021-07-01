@@ -12,18 +12,9 @@
 
 <body>
     <div class='wrapper'>
-
-
-        <header id='page-start' class='header'>
-            <div class='logo'>
-                <a class='logo__link' href="index.html"><img src="./pic/logo/bridge_logo-01.png" alt="logo"></a>
-            </div>
-            <!-- <nav class='menu'>
-                <a class='menu__item' href="index.html#gallery-works">Work</a>
-                <a class='menu__item' href="index.html#contact">Contact</a>
-                
-            </nav>  -->
-        </header>
+        <div class="carousel__header">
+            <a id='link' href="index.html"><img id='carousel__logo' class='carousel__logo' src="./pic/logo/bridge_logo-01.png" alt="logo"></a>
+        </div>
 
 
         <section class='info'>
@@ -51,63 +42,38 @@
     <div class="wrapper">
         <section class="preview">
             <a class='preview__title' href="#"><h2>Next project</h2></a>
-            <a class='preview__title' href="#"><div class="preview__picture"></div></a>
+            <a class='preview__picture' href="#"><img src='./pic/project1.png' alt=''></a>
         </section>
     </div>
 
 
-    <!-- <footer class='footer'>
-        <div class="footer__inner">
-            <a class="logo" href="index.html">
-                <img class="logo__img footer__logo" src="./pic/logo/bridge_logo-01.png" alt="" >
-            </a>
-            
-            <div class="social">
-                <a class="social__link" href="#">Instagram</a>
-                <a class="social__link" href="https://t.me/steveseven">Telegram</a>
-                <a class="social__link" href="#">Facebook</a>
-            </div>
-        </div>
-    </footer> -->
-
-
     <footer class='footer'>
         <div class="footer__inner">
-            <a class="logo" href="#page-start">
-                <img class="logo__img footer__logo" src="./pic/logo/bridge_logo-01.png" alt="" >
-            </a>
-            
-            <!-- <div class="social">
-                <a class="social__link" href="#">Instagram</a>
-                <a class="social__link" href="https://t.me/steveseven">Telegram</a>
-                <a class="social__link" href="#">Facebook</a>
-            </div> -->
-
-
-    <div class="contact">
-        <h3 id='contact' class="contact__title">Contact</h3>
-
-        <div class="contact__info">
-            <div class="contact__email">epsareva77@gmail.com</div>
-            <div class="contact__phone">+7 (960) 797 - 6097</div>
-
-            <div class="contact__social">
-                <a class="contact__link" href="#">
-                  <img class="social__img" src="./pic/icon/instagram.svg" alt="instagram icon">
-                </a>
-                <a class="contact__link" href="#">
-                  <img class="social__img" src="./pic/icon/telegram.svg" alt="telegram icon">
-                </a>
-                <a class="contact__link" href="#">
-                  <img  class="social__img" src="./pic/icon/facebook.svg" alt="facebook icon">
-                </a>
-              </div>
-        </div>
-    </div>
+            <a class="logo" href="index.html"><img class="logo__img footer__logo" src="./pic/logo/bridge_logo-01.png" alt="" ></a>
+            <div class="contact">
+                <div class="contact__left">
+                    <p id='contact' class="contact__title">Contact</p>
+                    <div class="contact__social">
+                        <a class="contact__link" href="#">
+                            <img class="social__img" src="./pic/icon/instagram.svg" alt="instagram icon">
+                        </a>
+                        <a class="contact__link" href="#">
+                            <img class="social__img" src="./pic/icon/telegram.svg" alt="telegram icon">
+                        </a>
+                        <a class="contact__link" href="#">
+                            <img  class="social__img" src="./pic/icon/facebook.svg" alt="facebook icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__info">
+                    <div class="contact__email">epsareva77@gmail.com</div>
+                    <div class="contact__phone">+7 (960) 797 - 6097</div>
+                </div>
+            </div>
         </div>
     </footer>
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
