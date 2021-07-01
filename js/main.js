@@ -54,7 +54,7 @@ $(function() {
                 'width': '300px',
                 'transition': '.3s',
             });
-            $("#link").attr("href","http://www.google.com/");
+            $("#link").attr("href","https://zhenyapechenya.github.io/Bridge/index.html");
         }
     });
 });
