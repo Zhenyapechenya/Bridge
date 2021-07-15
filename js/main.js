@@ -41,20 +41,39 @@ $(function() {
             header.removeClass('header_fixed');
         }
 
-        if($(this).scrollTop() > 500) {
-            $("#carousel__logo").attr("src","./pic/logo/favicon.png");
-            logo.css({
-                'width': '50px',
-                'transition': '.3s',
-            });
-            $("#link").attr("href","#");
+        if($(this).scrollTop() > 300) {
+            if(window.matchMedia('(max-width: 1200px)').matches){
+                // do functionality on screens smaller than 1200
+                $("#carousel__logo").attr("src","./pic/logo/favicon.png");
+                logo.css({
+                    'width': '35px',
+                    'transition': '.5s',
+                });
+            } else{
+        
+                $("#carousel__logo").attr("src","./pic/logo/favicon.png");
+                logo.css({
+                    'width': '40px',
+                    'transition': '.5s',
+                });
+                $("#link").attr("href","#");
+            }
         } else {
-            $("#carousel__logo").attr("src","./pic/logo/bridge_logo-01.png");
-            logo.css({
-                'width': '300px',
-                'transition': '.3s',
-            });
-            $("#link").attr("href","https://zhenyapechenya.github.io/Bridge/index.html");
+            if(window.matchMedia('(max-width: 1200px)').matches){
+                $("#carousel__logo").attr("src","./pic/logo/bridge_logo-01.png");
+                logo.css({
+                    'width': '250px',
+                    'transition': '.3s',
+                });
+                $("#link").attr("href","https://zhenyapechenya.github.io/Bridge/index.html");
+            }else {
+                $("#carousel__logo").attr("src","./pic/logo/bridge_logo-01.png");
+                logo.css({
+                    'width': '300px',
+                    'transition': '.3s',
+                });
+                $("#link").attr("href","https://zhenyapechenya.github.io/Bridge/index.html");
+            }
         }
     });
 });
